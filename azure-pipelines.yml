@@ -16,7 +16,7 @@ steps:
       command: 'init'
       workingDirectory: 'StorageAccount-Terraform'
       backendServiceArm: '637a4268-a29c-41d3-b746-68f50aba027d'
-      backendAzureRmResourceGroupName: 'az-tf-rg-testing'
+      backendAzureRmResourceGroupName: 'test-jay-learn-tf'
       backendAzureRmStorageAccountName: 'your_storage_account_name'
       backendAzureRmContainerName: 'your_container_name'
       backendAzureRmKey: 'tf/terraform.tfstate'

@@ -10,19 +10,7 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-  - task: TerraformTaskV1@0 
-    inputs:
-      provider: 'azurerm'
-      command: 'init'
-      workingDirectory: 'StorageAccount-Terraform'
-      backendServiceArm: '637a4268-a29c-41d3-b746-68f50aba027d'
-      backendAzureRmResourceGroupName: 'test-jay-learn-tf'
-      backendAzureRmStorageAccountName: 'your_storage_account_name'
-      backendAzureRmContainerName: 'your_container_name'
-      backendAzureRmKey: 'tf/terraform.tfstate'
-  - task: TerraformTaskV1@0 
-    inputs:
-      provider: 'azurerm'
-      command: 'apply'
-      workingDirectory: 'StorageAccount-Terraform'
-      environmentServiceNameAzureRM: '637a4268-a29c-41d3-b746-68f50aba027d'
+- task: TerraformCLI@0
+  displayName: 'check terraform version'
+  inputs:
+    command: version

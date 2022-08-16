@@ -10,9 +10,5 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- task: TerraformInstaller
-  displayName: install terraform
-- task: TerraformCLI@0
-  displayName: 'check terraform version'
-  inputs:
-    command: version
+- task: charleszipp.azure-pipelines-tasks-terraform.azure-pipelines-tasks-terraform-installer.TerraformInstaller@0
+  displayName: 'Use Terraform latest'

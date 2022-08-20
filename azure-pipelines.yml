@@ -10,6 +10,14 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
+
+- task: AzureKeyVault@2
+  inputs:
+    azureSubscription: 'learn-azure (972c488c-6d02-4d46-afa7-ed43e331e682)'
+    KeyVaultName: 'test-jay-kv'
+    SecretsFilter: '*'
+    RunAsPreJob: true
+    
 # Less noise 👌
 - bash: terraform plan -out deployment.tfplan
   displayName: Terraform Plan (ignores drift)

@@ -20,6 +20,7 @@ steps:
 
 # Initialize with explicitly mapped secrets
 - bash: |
+    cd StorageAccount-Terraform \
     terraform init \
       -backend-config="storage_account_name=tfstate28236" \
       -backend-config="container_name=tfstate" \

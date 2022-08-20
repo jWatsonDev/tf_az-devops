@@ -13,7 +13,7 @@ provider "azurerm" {
   features {}
 }
 
-resource "azurerm_resource_group" "state-demo-jay" {
-  name     = "state-demo"
+resource "azurerm_resource_group" "state-demo-test" {
+  name     = "state-demo-test"
   location = "eastus"
 }

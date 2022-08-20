@@ -31,5 +31,8 @@ steps:
 
 
 # Less noise 👌
-- bash: terraform plan -out deployment.tfplan
-  displayName: Terraform Plan (ignores drift)
+# - bash: terraform plan -out deployment.tfplan
+#   displayName: Terraform Plan (ignores drift)
+
+- bash: terraform apply -auto-approve deployment.tfplan
+  displayName: Terraform Apply

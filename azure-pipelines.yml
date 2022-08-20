@@ -34,7 +34,7 @@ steps:
 # - bash: terraform plan -out deployment.tfplan
 #   displayName: Terraform Plan (ignores drift)
 
-- bash: terraform apply -auto-approve deployment.tfplan
+- bash: terraform apply -auto-approve
   displayName: Terraform Apply
   env:
     ARM_SUBSCRIPTION_ID: $(kv-arm-subscription-id)
